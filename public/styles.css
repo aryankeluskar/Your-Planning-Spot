@@ -1,0 +1,121 @@
+html {
+    background-image: linear-gradient(to right, purple, #dd2a7b);
+    min-height: 100vh;
+    /* width: 100vw; */
+    /* font-size: 10vw; */
+    font-family: 'helvetica neue';
+}
+
+h1 {
+    color: white;
+    padding: 0vw 3vw;
+    font-weight: 900;
+    -webkit-text-stroke: 0.01cm black;
+}
+
+.box {
+    /* max-width: 50cm; */
+    width: fit-content;
+    margin: 50px auto;
+    padding: 1vw;
+    background: white;
+    border-radius: 5px;
+    height: fit-content;
+    box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+}
+
+#heading {
+    height: fit-content;
+    width: fit-content;
+    border: 0.2vw solid black;
+    text-shadow: black;
+    background-image: linear-gradient(to left, purple, #dd2a7b);
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.item {
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #F1F1F1;
+}
+
+.item:last-child {
+    border-bottom: 0;
+}
+
+input:checked+p {
+    text-decoration: line-through;
+    text-decoration-color: purple;
+}
+
+input[type="checkbox"] {
+    margin: 2vw 1vw;
+    /* width: 20%; */
+}
+
+p {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+    margin: 0;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #00204a;
+}
+
+form {
+    text-align: center;
+    margin-left: 20px;
+}
+
+button {
+    -webkit-text-stroke: 0.1vw black;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+    height: fit-content;
+    width: 80%;
+    border-radius: 1vw;
+    border-color: transparent;
+    background-image: linear-gradient(to left, purple, #dd2a7b);
+    color: #fff;
+    font-size: 2.2em;
+    padding: 0.5vw 1vw;
+    border-width: 0;
+    margin: 1vw;
+    display: block;
+}
+
+input[type="text"] {
+    display: inline;
+    text-align: center;
+    height: 60px;
+    top: 10px;
+    border: none;
+    background: transparent;
+    font-size: 20px;
+    font-weight: 200;
+    width: 313px;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    box-shadow: inset 0 -0.5mm 0 0 #dd2a7b;
+}
+
+ ::placeholder {
+    color: grey;
+    opacity: 1;
+}
+
+input:hover {
+    color: lightgrey;
+    opacity: 0.5;
+}
+
+footer {
+    color: white;
+    color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+}

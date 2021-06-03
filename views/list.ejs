@@ -4,19 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>To Do List -
+        <%= Day %>
+    </title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <form action="">
-        <input type="text" name="" id="new">
-    </form>
-    <button onclick="newtd();">Add To List</button>
-    <ul>
-        <li>Drink Water</li>
-        <li>Play Songs</li>
-        <li>Say Hello</li>
-    </ul>
+    <div id="heading" class="box">
+        <h1>
+            <%= Day %>
+        </h1>
+    </div>
+
+    <div class="box">
+        <% for(var i=0; i < newli.length; i++){ %>
+            <div class="item">
+                <input type="checkbox">
+                <p>
+                    <%= newli[i] %>
+                </p>
+            </div>
+            <%  } %>
+                <form action="/" method="POST">
+                    <input type="text" autocomplete="off" name="newItem" placeholder="Type the New Item here" id="">
+                    <button type="submit" name="button">Add</button>
+                </form>
+    </div>
+
 </body>
 
 </html>

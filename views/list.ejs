@@ -1,13 +1,14 @@
 <html lang="en">
 
 <head>
+    <link rel="shortcut icon" href="fav.png" type="image/png">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To Do List -
         <%= Day %>
     </title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -22,7 +23,7 @@
             <div class="item">
                 <input type="checkbox">
                 <p>
-                    <%= newli[i] %>
+                    <%= newli[i].name %>
                 </p>
             </div>
             <%  } %>
@@ -31,7 +32,7 @@
                     <button type="submit" name="button">Add</button>
                 </form>
     </div>
-
+    <marquee behavior="" direction="">Website by Aryan, Follow me on Instagram and Watch my YouTube Channel</marquee>
 </body>
 
 </html>

@@ -21,14 +21,16 @@
     <div class="box">
         <% for(var i=0; i < newli.length; i++){ %>
             <div class="item">
-                <input type="checkbox">
+                <form action="/delete" method="post">
+                    <input style="margin-left: 2em;margin-top: 2em;" value="<%=newli[i]._id%>" name="cb" onChange="this.form.submit()" type="checkbox">
+                </form>
                 <p>
                     <%= newli[i].name %>
                 </p>
             </div>
             <%  } %>
-                <form action="/" method="POST">
-                    <input type="text" autocomplete="off" name="newItem" placeholder="Type the New Item here" id="">
+                <form action="/" method="POST" id="sub">
+                    <input type="text" autocomplete="off" name="newItem" placeholder="Type New Item here" id="">
                     <button type="submit" name="button">Add</button>
                 </form>
     </div>

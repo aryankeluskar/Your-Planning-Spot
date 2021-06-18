@@ -1,0 +1,40 @@
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" href="fav.png" type="image/png">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List -
+        <%= Day %>
+    </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="heading" class="box">
+        <h1>
+            <%= Day %>
+        </h1>
+    </div>
+
+    <div class="box">
+        <% for(var i=0; i < newli.length; i++){ %>
+            <div class="item">
+                <form action="/delete" method="post">
+                    <input style="margin-left: 2em;margin-top: 2em;" value="<%=newli[i]._id%>" name="cb" onChange="this.form.submit()" type="checkbox">
+                </form>
+                <p>
+                    <%= newli[i].name %>
+                </p>
+            </div>
+            <%  } %>
+                <form action="/" method="POST" id="sub">
+                    <input type="text" autocomplete="off" name="newItem" placeholder="Type New Item here" id="">
+                    <button type="submit" name="button">Add</button>
+                </form>
+    </div>
+    <marquee behavior="" direction="">Website by Aryan, Follow me on Instagram and Watch my YouTube Channel</marquee>
+</body>
+
+</html>

@@ -2,13 +2,12 @@ const express = require('express');
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
 const app = express();
-var itarr = [];
 
 app.set('view engine', 'ejs')
 app.use(express.static("public"))
 app.use(bodyParser.urlencoded({ extended: true }));
-
-mongoose.connect("mongodb://localhost:27017/tdList", { useNewUrlParser: true, useUnifiedTopology: true })
+var constants = require("./keys");
+mongoose.connect("mongodb+srv://aryan-keluskar:" + constants.PI + "@cluster0.xj6cf.mongodb.net/tdList", { useNewUrlParser: true, useUnifiedTopology: true })
 const tdlSchema = {
     name: String
 };
@@ -32,7 +31,6 @@ items.find({}, function(err, found) {
         });
     }
 });
-
 app.get("/", function(req, res) {
     var options = {
         weekday: "long",
@@ -46,26 +44,25 @@ app.get("/", function(req, res) {
         // console.log(found[i].name);    
         res.render('list', { Day: day, newli: found });
     });
+
 });
 
 app.post("/", function(req, res) {
-    item = req.body.newItem;
     const ni = new items({
-        name: item
+        name: req.body.newItem
     });
     ni.save();
-    console.log(item);
-    res.redirect("/")
+    // console.log(item);
+    // res.redirect('https://www.google.com')
+    res.redirect("http://localhost:3000");
 });
 
 app.post("/delete", function(req, res) {
-    console.log(req.body.cb);
-    items.find({ _id: req.body.cb }, function(err, found) {
-        console.log("Removed: " + found[0].name);
-    });
-
     items.findByIdAndDelete({ _id: req.body.cb }, function(err) {});
-    res.redirect("/")
+    // res.redirect("http://localhost:3000")
+    // res.redirect("http://localhost:3000")
+    res.redirect("/");
+
 });
 
 app.listen(3000, function() { console.log("server started at http://localhost:3000"); })

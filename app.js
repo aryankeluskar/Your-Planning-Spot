@@ -54,7 +54,7 @@ app.post("/", function(req, res) {
     ni.save();
     // console.log(item);
     // res.redirect('https://www.google.com')
-    res.redirect("http://localhost:3000");
+    res.redirect("/");
 });
 
 app.post("/delete", function(req, res) {

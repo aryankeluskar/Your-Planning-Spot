@@ -27,7 +27,7 @@ h1 {
 
 #heading {
     height: 10vh;
-    width: 25vw;
+    width: 3-vw;
     border: 0.2vw solid black;
     text-shadow: black;
     background-image: linear-gradient(to left, purple, #dd2a7b);

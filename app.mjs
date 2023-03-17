@@ -1,7 +1,8 @@
+// ARYAN, PLS ADD ANOTHER CONDITION TO CHECK IF ONLY NAME IS PRESENT BUT NOT PASSWORD
+// use google oauth to log in, also add a date coloumn, and integrate the same with google calender
+// the above will set this apart from other to do list projects.
+// encrypt the to do list
 
-// ------------------------------
-// code to handle MongoDB below
-// ------------------------------
 
 import express from 'express';
 import pkg from 'mongodb';
@@ -135,8 +136,6 @@ async function run() {
 
 
                     }
-                    
-                    // ARYAN, PLS ADD ANOTHER CONDITION TO CHECK IF ONLY NAME IS PRESENT BUT NOT PASSWORD
 
                     else {
                         console.log("reached adding new user cause he doesnt exist");

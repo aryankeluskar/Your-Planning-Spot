@@ -52,7 +52,7 @@ async function run() {
             // this option instructs the method to create a document if no documents match the filter
             let options = { upsert: true };
 
-            col.findOne(filter, function (err, personDocument) {
+            col.findOne(filter, async function (err, personDocument) {
                 if (personDocument) {
                     let actualList = personDocument.theirlist;
                     console.log(actualList);
@@ -130,9 +130,9 @@ async function run() {
 
                 }
                 if (err) {
-                    console.log("error occurred");
-                    console.log(err);
-                    res.redirect('/signup')
+                    await db.collection("usersdata").insertOne({
+                        name: {userfirst: req.body.namein }
+                    });
                 }
             });
         });
